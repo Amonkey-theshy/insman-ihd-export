@@ -1,0 +1,37 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+insman_config.json
+*_config.json
+!insman_config.example.json
+*.pem
+*.key
+
+# Runtime output, deployment and backups
+/build/
+/dist/
+/exported_csv/
+/exported_excel/
+*.csv
+*.xlsx
+*.log
+*_KingAPI.txt
+
+# Vendor SDK binaries (supply locally)
+*.dll
+*.pyd
+*.lib
+*.jar
+*.exe
+*.zip
+
+# Python / editor state
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+.vscode/
+.idea/

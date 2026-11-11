@@ -1,0 +1,15 @@
+{
+  "ihd_server": "127.0.0.1",
+  "ihd_port": 5673,
+  "ihd_bak_server": "",
+  "ihd_bak_port": 0,
+  "ihd_username": "",
+  "ihd_password": "",
+  "tag_name": "YOUR_TAG",
+  "start_time": "2026-01-01 00:00:00",
+  "end_time": "2026-01-01 01:00:00",
+  "interval_seconds": 1,
+  "chunk_minutes": 20,
+  "max_workers": 4,
+  "output_dir": "./exported_csv"
+}
