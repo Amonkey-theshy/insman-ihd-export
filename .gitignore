@@ -45,3 +45,6 @@ venv/
 .coverage
 .vscode/
 .idea/
+
+# Compiled extensions are required by the portable Python runtime.
+!/portable/INSMAN/**/*.pyd
