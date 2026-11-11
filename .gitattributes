@@ -6,5 +6,13 @@
 *.spec text eol=lf
 *.png binary
 *.ico binary
+*.dll binary
+*.pyd binary
+*.lib binary
+*.jar binary
+*.exe binary
+*.zip binary
+# Keep the tested portable payload byte-for-byte identical across checkouts.
+portable/INSMAN/** -text
 # Preserve vendor header encodings byte-for-byte.
 include/*.h -text

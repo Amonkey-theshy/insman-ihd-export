@@ -2,15 +2,15 @@
 from pathlib import Path
 
 root = Path(SPECPATH)
-# The restored release contains the original vendor SDK and icon.
-sdk = root / 'dist' / 'INSMAN' / '_internal' / 'library'
+# Prefer the SDK shipped with the repository; support older local releases too.
+sdk = root / 'library'
 if not (sdk / 'hdKingAPI.dll').exists():
-    sdk = root / 'library'
+    sdk = root / 'dist' / 'INSMAN' / '_internal' / 'library'
 if not (sdk / 'hdKingAPI.dll').exists():
     raise FileNotFoundError('Restore the iHD SDK DLLs before building INSMAN')
-icon = root / 'dist' / 'INSMAN' / '_internal' / 'assets' / 'INSMAN.ico'
+icon = root / 'assets' / 'INSMAN.ico'
 if not icon.exists():
-    icon = root / 'assets' / 'INSMAN.ico'
+    icon = root / 'dist' / 'INSMAN' / '_internal' / 'assets' / 'INSMAN.ico'
 
 a = Analysis([str(root / 'insman_gui.py')], pathex=[str(root)],
              binaries=[(str(p), 'library') for p in sdk.glob('*.dll')],

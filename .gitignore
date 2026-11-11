@@ -18,13 +18,23 @@ insman_config.json
 *.log
 *_KingAPI.txt
 
-# Vendor SDK binaries (supply locally)
+# Build artifacts are ignored except for the published SDK and portable app.
 *.dll
 *.pyd
 *.lib
 *.jar
 *.exe
 *.zip
+!/library/*.dll
+!/library/*.lib
+!/library/*.jar
+!/portable/INSMAN/**
+/portable/INSMAN/insman_config.json
+/portable/INSMAN/exported_csv/
+/portable/INSMAN/exported_excel/
+/portable/INSMAN/**/*_KingAPI.txt
+/portable/INSMAN/**/*.log
+/portable/INSMAN/self_test_report.json
 
 # Python / editor state
 __pycache__/

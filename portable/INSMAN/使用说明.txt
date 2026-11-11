@@ -1,0 +1,15 @@
+﻿INSMAN · Windows 10/11 64 位便携版
+
+1. 将整个 INSMAN 文件夹解压到可写目录。不要在压缩包内直接运行。
+2. 双击 INSMAN.exe；无需安装 Python、Java 或单独安装 SDK。
+3. 在服务器连接页输入实际服务器、端口、用户名与密码。
+4. 在导出参数页填写测点与时间，选择保存位置，开始导出。
+
+_internal 包含 Python、界面和 SDK 运行库，必须与 EXE 一起保留。
+首次使用不附带现场凭据，配置将在首次导出时保存到程序旁。
+连接数据库需在能访问现场 iHD 的网络中运行。
+Windows Server、32 位 Windows 和 ARM Windows 尚未验证。
+
+离线自检（PowerShell，在本文件夹执行，不连接数据库）：
+.\INSMAN.exe --self-test --report .\self_test_report.json
+检查报告的 ok 为 true 表示界面、SDK 加载与模拟 CSV 导出正常。
